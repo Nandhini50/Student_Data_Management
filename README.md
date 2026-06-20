@@ -56,5 +56,3 @@ The Admin can add, update, and delete student records and manage marks. Students
 - JSON Files
 
 ---
-
-## Project Structure
