@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h2>Student Management</h2>
+    <p class="subtitle">Sign in to continue</p>
+
+    <div class="field">
+      <label for="username">Username</label>
+      <input id="username" placeholder="Enter Username">
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter Password">
+    </div>
+
+    <button class="btn-primary" id="loginBtn" onclick="login()">Login</button>
+
+    <p id="message" class="message"></p>
+
+    
+  </div>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

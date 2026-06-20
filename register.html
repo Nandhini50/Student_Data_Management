@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Student | Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <h1>Student Mgmt</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="students.html">Students</a>
+      <a href="marks.html">Marks</a>
+      <a href="register.html" class="active">Register Student</a>
+      <a href="#" class="logout-link" onclick="DB.logout()">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Register Student</h2>
+    </header>
+
+    <div class="panel" style="max-width:480px;">
+      <div class="field">
+        <label for="rollNumber">Roll Number</label>
+        <input id="rollNumber" placeholder="e.g. CSE2026001">
+      </div>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" placeholder="Enter Name">
+      </div>
+      <div class="field">
+        <label for="department">Department</label>
+        <input id="department" placeholder="e.g. CSE">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" placeholder="Enter Email">
+      </div>
+      <div class="field">
+        <label for="mobile">Mobile</label>
+        <input id="mobile" placeholder="10-digit mobile number">
+      </div>
+
+      <button class="btn-primary" id="registerBtn" onclick="registerStudent()">Save</button>
+      <p id="message" class="message"></p>
+    </div>
+  </main>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

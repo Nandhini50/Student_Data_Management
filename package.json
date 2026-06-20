@@ -1,0 +1,17 @@
+{
+  "name": "student-management-backend",
+  "version": "2.0.0",
+  "description": "Backend for the Student Management app (with auth, roll number, department, mobile, marks)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

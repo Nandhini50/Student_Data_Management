@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <h1>Student Mgmt</h1>
+    <nav>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="students.html">Students</a>
+      <a href="marks.html">Marks</a>
+      <a href="register.html">Register Student</a>
+      <a href="#" class="logout-link" onclick="DB.logout()">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Dashboard</h2>
+      <span id="welcomeText" class="welcome-text"></span>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Total Students</div>
+        <div class="value accent" id="totalStudents">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Marks Entries</div>
+        <div class="value good" id="totalMarksEntries">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Class Average</div>
+        <div class="value warn" id="classAverage">-</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Department-wise Count</h3>
+      <div class="dept-breakdown" id="deptBreakdown"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Quick Links</h3>
+      <div class="actions-row">
+        <a href="students.html"><button class="btn-secondary">View Students</button></a>
+        <a href="marks.html"><button class="btn-secondary">View / Add Marks</button></a>
+        <a href="register.html"><button class="btn-primary" style="width:auto;">Register New Student</button></a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

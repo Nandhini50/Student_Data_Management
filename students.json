@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1781828175519",
+    "rollNumber": "CSE23001",
+    "name": "Priya",
+    "department": "CSE",
+    "email": "priya@gmail.com",
+    "mobile": "6328763523"
+  },
+  {
+    "id": "1781839388528",
+    "rollNumber": "ECE23045",
+    "name": "Karthik",
+    "department": "ECE",
+    "email": "kk2022@gmail.com",
+    "mobile": "8894603874"
+  }
+]

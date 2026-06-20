@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students | Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <h1>Student Mgmt</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="students.html" class="active">Students</a>
+      <a href="marks.html">Marks</a>
+      <a href="register.html">Register Student</a>
+      <a href="#" class="logout-link" onclick="DB.logout()">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Students</h2>
+    </header>
+
+    <div class="actions-row">
+      <a href="register.html"><button class="btn-primary" style="width:auto;">+ Register Student</button></a>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <div class="panel">
+      <div class="search-sort-row">
+        <input id="searchInput" placeholder="Search by name, roll number, department, or email...">
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable" data-column="rollNumber" data-label="Roll No">Roll No</th>
+              <th class="sortable" data-column="name" data-label="Name">Name</th>
+              <th class="sortable" data-column="department" data-label="Department">Department</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal-overlay" id="editModalOverlay">
+  <div class="modal-card">
+    <h3>Edit Student</h3>
+    <input type="hidden" id="editId">
+
+    <div class="field">
+      <label for="editRollNumber">Roll Number</label>
+      <input id="editRollNumber">
+    </div>
+    <div class="field">
+      <label for="editName">Name</label>
+      <input id="editName">
+    </div>
+    <div class="field">
+      <label for="editDepartment">Department</label>
+      <input id="editDepartment">
+    </div>
+    <div class="field">
+      <label for="editEmail">Email</label>
+      <input id="editEmail">
+    </div>
+    <div class="field">
+      <label for="editMobile">Mobile</label>
+      <input id="editMobile">
+    </div>
+
+    <div class="actions-row" style="margin-bottom:0;">
+      <button class="btn-primary" style="width:auto;" onclick="saveEdit()">Save Changes</button>
+      <button class="btn-secondary" onclick="closeEditModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>

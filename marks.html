@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marks | Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <h1>Student Mgmt</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="students.html">Students</a>
+      <a href="marks.html" class="active">Marks</a>
+      <a href="register.html">Register Student</a>
+      <a href="#" class="logout-link" onclick="DB.logout()">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Marks</h2>
+    </header>
+
+    <div class="panel">
+      <h3>Add / Update Marks</h3>
+      <div class="form-row">
+        <div class="field">
+          <label for="studentSelect">Student</label>
+          <select id="studentSelect"></select>
+        </div>
+        <div class="field">
+          <label for="internal">Internal (out of 50)</label>
+          <input id="internal" type="number" min="0" max="50" placeholder="e.g. 40">
+        </div>
+        <div class="field">
+          <label for="external">External (out of 50)</label>
+          <input id="external" type="number" min="0" max="50" placeholder="e.g. 45">
+        </div>
+        <div class="field">
+          <button class="btn-primary" onclick="saveMarks()">Save Marks</button>
+        </div>
+      </div>
+      <p id="message" class="message"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Marks Summary</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Internal</th>
+              <th>External</th>
+              <th>Total</th>
+              <th>Grade (Average)</th>
+            </tr>
+          </thead>
+          <tbody id="marksTableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/marks.js"></script>
+</body>
+</html>
